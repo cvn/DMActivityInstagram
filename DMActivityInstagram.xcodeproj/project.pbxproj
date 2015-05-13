@@ -20,11 +20,7 @@
 		8B03DB17160C5DD50070B8B0 /* DMAIDemoViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B03DB15160C5DD50070B8B0 /* DMAIDemoViewController_iPhone.xib */; };
 		8B03DB1A160C5DD50070B8B0 /* DMAIDemoViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B03DB18160C5DD50070B8B0 /* DMAIDemoViewController_iPad.xib */; };
 		8B03DB21160C5F380070B8B0 /* example.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B03DB20160C5F380070B8B0 /* example.png */; };
-		8B03DB24160C62700070B8B0 /* DMActivityInstagram.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B03DB23160C62700070B8B0 /* DMActivityInstagram.m */; };
-		8B03DB2C160C6CEC0070B8B0 /* DMResizerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B03DB2A160C6CEC0070B8B0 /* DMResizerViewController.m */; };
-		8B03DB2D160C6CEC0070B8B0 /* DMResizerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B03DB2B160C6CEC0070B8B0 /* DMResizerViewController.xib */; };
 		8BCB71D61621029300063B83 /* example_square.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BCB71D51621029300063B83 /* example_square.png */; };
-		8BD3FCC117F10C7E001155D6 /* DMColorPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD3FCC017F10C7E001155D6 /* DMColorPickerView.m */; };
 		8BD3FCCD17F11299001155D6 /* space@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8BD3FCC317F11299001155D6 /* space@2x.jpg */; };
 		8BD3FCCE17F11299001155D6 /* camo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BD3FCC417F11299001155D6 /* camo@2x.png */; };
 		8BD3FCCF17F11299001155D6 /* bigtiger@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8BD3FCC517F11299001155D6 /* bigtiger@2x.jpg */; };
@@ -39,6 +35,10 @@
 		8BFEBF9A160C774900A4A213 /* instagram@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BFEBF96160C774900A4A213 /* instagram@2x.png */; };
 		8BFEBF9B160C774900A4A213 /* instagram~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BFEBF97160C774900A4A213 /* instagram~ipad.png */; };
 		8BFEBF9C160C774900A4A213 /* instagram~ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BFEBF98160C774900A4A213 /* instagram~ipad@2x.png */; };
+		EAF59C261B0348B800C78CD5 /* DMActivityInstagram.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF59C201B0348B800C78CD5 /* DMActivityInstagram.m */; };
+		EAF59C271B0348B800C78CD5 /* DMColorPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF59C221B0348B800C78CD5 /* DMColorPickerView.m */; };
+		EAF59C281B0348B800C78CD5 /* DMResizerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF59C241B0348B800C78CD5 /* DMResizerViewController.m */; };
+		EAF59C291B0348B800C78CD5 /* DMResizerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAF59C251B0348B800C78CD5 /* DMResizerViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,14 +60,7 @@
 		8B03DB16160C5DD50070B8B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DMAIDemoViewController_iPhone.xib; sourceTree = "<group>"; };
 		8B03DB19160C5DD50070B8B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DMAIDemoViewController_iPad.xib; sourceTree = "<group>"; };
 		8B03DB20160C5F380070B8B0 /* example.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = example.png; sourceTree = "<group>"; };
-		8B03DB22160C62700070B8B0 /* DMActivityInstagram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMActivityInstagram.h; sourceTree = "<group>"; };
-		8B03DB23160C62700070B8B0 /* DMActivityInstagram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMActivityInstagram.m; sourceTree = "<group>"; };
-		8B03DB29160C6CEC0070B8B0 /* DMResizerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMResizerViewController.h; sourceTree = "<group>"; };
-		8B03DB2A160C6CEC0070B8B0 /* DMResizerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMResizerViewController.m; sourceTree = "<group>"; };
-		8B03DB2B160C6CEC0070B8B0 /* DMResizerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DMResizerViewController.xib; sourceTree = "<group>"; };
 		8BCB71D51621029300063B83 /* example_square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = example_square.png; sourceTree = "<group>"; };
-		8BD3FCBF17F10C7E001155D6 /* DMColorPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMColorPickerView.h; sourceTree = "<group>"; };
-		8BD3FCC017F10C7E001155D6 /* DMColorPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMColorPickerView.m; sourceTree = "<group>"; };
 		8BD3FCC317F11299001155D6 /* space@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "space@2x.jpg"; sourceTree = "<group>"; };
 		8BD3FCC417F11299001155D6 /* camo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camo@2x.png"; sourceTree = "<group>"; };
 		8BD3FCC517F11299001155D6 /* bigtiger@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bigtiger@2x.jpg"; sourceTree = "<group>"; };
@@ -82,6 +75,14 @@
 		8BFEBF96160C774900A4A213 /* instagram@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "instagram@2x.png"; sourceTree = "<group>"; };
 		8BFEBF97160C774900A4A213 /* instagram~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "instagram~ipad.png"; sourceTree = "<group>"; };
 		8BFEBF98160C774900A4A213 /* instagram~ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "instagram~ipad@2x.png"; sourceTree = "<group>"; };
+		EAF59C1F1B0348B800C78CD5 /* DMActivityInstagram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMActivityInstagram.h; sourceTree = "<group>"; };
+		EAF59C201B0348B800C78CD5 /* DMActivityInstagram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMActivityInstagram.m; sourceTree = "<group>"; };
+		EAF59C211B0348B800C78CD5 /* DMColorPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMColorPickerView.h; sourceTree = "<group>"; };
+		EAF59C221B0348B800C78CD5 /* DMColorPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMColorPickerView.m; sourceTree = "<group>"; };
+		EAF59C231B0348B800C78CD5 /* DMResizerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMResizerViewController.h; sourceTree = "<group>"; };
+		EAF59C241B0348B800C78CD5 /* DMResizerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMResizerViewController.m; sourceTree = "<group>"; };
+		EAF59C251B0348B800C78CD5 /* DMResizerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DMResizerViewController.xib; sourceTree = "<group>"; };
+		EAF59C2A1B0348D900C78CD5 /* DMResizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMResizer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,17 +129,11 @@
 		8B03DB00160C5DD50070B8B0 /* DMActivityInstagram */ = {
 			isa = PBXGroup;
 			children = (
+				EAF59C1E1B0348B800C78CD5 /* Classes */,
 				8B03DB09160C5DD50070B8B0 /* DMAppDelegate.h */,
 				8B03DB0A160C5DD50070B8B0 /* DMAppDelegate.m */,
 				8B03DB12160C5DD50070B8B0 /* DMAIDemoViewController.h */,
 				8B03DB13160C5DD50070B8B0 /* DMAIDemoViewController.m */,
-				8B03DB22160C62700070B8B0 /* DMActivityInstagram.h */,
-				8B03DB23160C62700070B8B0 /* DMActivityInstagram.m */,
-				8B03DB29160C6CEC0070B8B0 /* DMResizerViewController.h */,
-				8B03DB2A160C6CEC0070B8B0 /* DMResizerViewController.m */,
-				8BD3FCBF17F10C7E001155D6 /* DMColorPickerView.h */,
-				8BD3FCC017F10C7E001155D6 /* DMColorPickerView.m */,
-				8B03DB2B160C6CEC0070B8B0 /* DMResizerViewController.xib */,
 				8B03DB15160C5DD50070B8B0 /* DMAIDemoViewController_iPhone.xib */,
 				8B03DB18160C5DD50070B8B0 /* DMAIDemoViewController_iPad.xib */,
 				8BD3FCC217F11299001155D6 /* bgs */,
@@ -192,6 +187,21 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		EAF59C1E1B0348B800C78CD5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EAF59C2A1B0348D900C78CD5 /* DMResizer.h */,
+				EAF59C1F1B0348B800C78CD5 /* DMActivityInstagram.h */,
+				EAF59C201B0348B800C78CD5 /* DMActivityInstagram.m */,
+				EAF59C211B0348B800C78CD5 /* DMColorPickerView.h */,
+				EAF59C221B0348B800C78CD5 /* DMColorPickerView.m */,
+				EAF59C231B0348B800C78CD5 /* DMResizerViewController.h */,
+				EAF59C241B0348B800C78CD5 /* DMResizerViewController.m */,
+				EAF59C251B0348B800C78CD5 /* DMResizerViewController.xib */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -219,7 +229,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = DM;
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Cory Alder";
 			};
 			buildConfigurationList = 8B03DAF0160C5DD50070B8B0 /* Build configuration list for PBXProject "DMActivityInstagram" */;
@@ -246,6 +256,7 @@
 			files = (
 				8BD3FCD317F11299001155D6 /* blue-td@2x.jpg in Resources */,
 				8BD3FCCD17F11299001155D6 /* space@2x.jpg in Resources */,
+				EAF59C291B0348B800C78CD5 /* DMResizerViewController.xib in Resources */,
 				8B03DB05160C5DD50070B8B0 /* InfoPlist.strings in Resources */,
 				8B03DB0D160C5DD50070B8B0 /* Default.png in Resources */,
 				8BD3FCD517F11299001155D6 /* charlie-brown@2x.jpg in Resources */,
@@ -256,7 +267,6 @@
 				8B03DB1A160C5DD50070B8B0 /* DMAIDemoViewController_iPad.xib in Resources */,
 				8B03DB21160C5F380070B8B0 /* example.png in Resources */,
 				8BD3FCCF17F11299001155D6 /* bigtiger@2x.jpg in Resources */,
-				8B03DB2D160C6CEC0070B8B0 /* DMResizerViewController.xib in Resources */,
 				8BFEBF99160C774900A4A213 /* instagram.png in Resources */,
 				8BFEBF9A160C774900A4A213 /* instagram@2x.png in Resources */,
 				8BD3FCD417F11299001155D6 /* dark-td@2x.jpg in Resources */,
@@ -277,12 +287,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAF59C261B0348B800C78CD5 /* DMActivityInstagram.m in Sources */,
 				8B03DB07160C5DD50070B8B0 /* main.m in Sources */,
 				8B03DB0B160C5DD50070B8B0 /* DMAppDelegate.m in Sources */,
 				8B03DB14160C5DD50070B8B0 /* DMAIDemoViewController.m in Sources */,
-				8B03DB24160C62700070B8B0 /* DMActivityInstagram.m in Sources */,
-				8B03DB2C160C6CEC0070B8B0 /* DMResizerViewController.m in Sources */,
-				8BD3FCC117F10C7E001155D6 /* DMColorPickerView.m in Sources */,
+				EAF59C281B0348B800C78CD5 /* DMResizerViewController.m in Sources */,
+				EAF59C271B0348B800C78CD5 /* DMColorPickerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +349,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
