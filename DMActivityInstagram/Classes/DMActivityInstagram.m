@@ -20,6 +20,12 @@
 }
 
 - (UIImage *)activityImage {
+    if (self.activityImageFilename) {
+        UIImage *activityImage = [UIImage imageNamed:self.activityImageFilename];
+        if (activityImage) {
+            return activityImage;
+        }
+    }
     return [UIImage imageNamed:@"instagram.png"];
 }
 

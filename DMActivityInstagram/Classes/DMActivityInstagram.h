@@ -16,6 +16,8 @@
 @property (nonatomic, strong) NSArray *backgroundColors;
 @property (readwrite) BOOL includeURL;
 
+@property (strong, nonatomic) NSString *activityImageFilename;
+
 @property (nonatomic, strong) UIBarButtonItem *presentFromButton;
 // overwritten if shareImage is non-square, because the document-interaction-controller is presented in the resize view.
 
