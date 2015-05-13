@@ -38,7 +38,11 @@
 - (void)drawRect:(CGRect)rect
 {
     for (UIButton *button in [self.contentView subviews]) {
-        button.layer.cornerRadius = button.bounds.size.width / 2.0;
+        if (self.roundedButtons) {
+            button.layer.cornerRadius = button.bounds.size.width / 2.0;
+        }
+        button.layer.borderColor = [UIColor whiteColor].CGColor;
+        button.layer.borderWidth = 3.0f;
     }
     [self.contentView setNeedsDisplay];
 }
