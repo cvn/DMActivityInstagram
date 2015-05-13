@@ -16,8 +16,8 @@
 
 @interface DMColorPickerView : UIView
 
-@property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, weak) id <DMColorPickerDelegate> delegate;
 @property (nonatomic, strong) NSArray *colors;
+@property (assign, nonatomic) BOOL roundedButtons;
 
 @end

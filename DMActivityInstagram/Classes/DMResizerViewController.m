@@ -52,7 +52,7 @@ skipCropping=_skipCropping;
     
     self.colorPicker.delegate = self;
     self.colorPicker.colors = [self.delegate backgroundColors];
-    
+    self.colorPicker.roundedButtons = YES;
     
     self.navigationController.navigationBarHidden = YES;
     
