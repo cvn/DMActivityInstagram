@@ -23,10 +23,10 @@
 
 @property (nonatomic, strong) UIImage *inputImage;
 @property (nonatomic, strong) id <DMResizerDelegate> delegate;
-@property (readwrite) BOOL skipCropping;
+@property (assign, nonatomic) BOOL skipCropping;
 
 @required
-- (instancetype)initWithImage:(UIImage *)imageObject andDelegate:(id<DMResizerDelegate>)delegate;
+- (instancetype)initWithImage:(UIImage *)imageObject;
 
 #pragma mark - Actions
 - (void)editingDone;

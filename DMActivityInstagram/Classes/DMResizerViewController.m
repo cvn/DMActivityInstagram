@@ -19,10 +19,9 @@
 delegate=_delegate,
 skipCropping=_skipCropping;
 
--(id)initWithImage:(UIImage *)imageObject andDelegate:(id<DMResizerDelegate>)delegate {
+-(id)initWithImage:(UIImage *)imageObject
+{
     if (!(self = [super initWithNibName:@"DMResizerViewController" bundle:nil])) return nil;
-    
-    _delegate = delegate;
     
     UIImage *exportImage = [UIImage imageWithCGImage:imageObject.CGImage scale:imageObject.scale orientation:UIImageOrientationUp];
     

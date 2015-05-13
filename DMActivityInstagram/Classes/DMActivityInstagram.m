@@ -7,6 +7,7 @@
 //
 
 #import "DMActivityInstagram.h"
+#import "DMResizerViewController.h"
 
 @implementation DMActivityInstagram
 
@@ -51,17 +52,19 @@
         else NSLog(@"Unknown item type %@", item);
     }
 }
-
-- (UIViewController *)activityViewController {
-    // resize controller if resize is required.
-    if (!self.resizeController) {
-        self.resizeController = [[DMResizerViewController alloc] initWithImage:self.shareImage andDelegate:self];
-        
-        if ([self imageIsSquare:self.shareImage]) {
-            self.resizeController.skipCropping = YES;
-        }
+- (UIViewController *)activityViewController
+{
+    return (UIViewController *)_resizeController;
+}
+- (void)setResizeController:(id<DMResizer>)resizeController
+{
+    NSAssert([resizeController isKindOfClass:[UIViewController class]], @"resizeController must be of class UIViewController");
+    NSAssert([resizeController conformsToProtocol:@protocol(DMResizer)], @"resizeController must conform to DMResizer protocol");
+    _resizeController = resizeController;
+    [_resizeController setDelegate:self];
+    if ([self imageIsSquare:self.shareImage]) {
+        [_resizeController setSkipCropping:YES];
     }
-    return self.resizeController;
 }
 
 -(void)resizer:(DMResizerViewController *)resizer finishedResizingWithResult:(UIImage *)image {
