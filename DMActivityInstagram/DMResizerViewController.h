@@ -9,20 +9,12 @@
 #import <UIKit/UIKit.h>
 
 #import "DMColorPickerView.h"
+#import "DMResizer.h"
 
 @class DMResizerViewController;
 
-@protocol DMResizerDelegate <NSObject>
 
--(void)resizer:(DMResizerViewController *)resizer finishedResizingWithResult:(UIImage *)image;
--(NSArray *)backgroundColors;
-
-@end
-
-
-@interface DMResizerViewController : UIViewController <UIScrollViewDelegate, DMColorPickerDelegate>
-
-@property (readwrite) BOOL skipCropping;
+@interface DMResizerViewController : UIViewController <UIScrollViewDelegate, DMColorPickerDelegate, DMResizer>
 
 @property (nonatomic, strong) IBOutlet UIImageView *imageView;
 @property (nonatomic, strong) IBOutlet UIScrollView *scrollView;
@@ -35,16 +27,7 @@
 
 @property (nonatomic, strong) IBOutlet DMColorPickerView *colorPicker;
 
-@property (nonatomic, strong) UIImage *inputImage;
 
-@property (nonatomic, strong) id <DMResizerDelegate> delegate;
 
--(IBAction)doneButtonAction;
--(IBAction)rotateButtonAction;
--(IBAction)cancelButtonAction;
-
--(IBAction)changeColor:(id)sender;
-
--(id)initWithImage:(UIImage *)imageObject andDelegate:(id<DMResizerDelegate>)delegate;
 
 @end

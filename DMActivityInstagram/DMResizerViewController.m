@@ -14,18 +14,19 @@
 }
 @end
 
-
 @implementation DMResizerViewController
+@synthesize inputImage=_inputImage,
+delegate=_delegate,
+skipCropping=_skipCropping;
 
 -(id)initWithImage:(UIImage *)imageObject andDelegate:(id<DMResizerDelegate>)delegate {
     if (!(self = [super initWithNibName:@"DMResizerViewController" bundle:nil])) return nil;
     
-    self.delegate = delegate;
+    _delegate = delegate;
     
     UIImage *exportImage = [UIImage imageWithCGImage:imageObject.CGImage scale:imageObject.scale orientation:UIImageOrientationUp];
     
-    self.inputImage = exportImage;
-    
+    _inputImage = exportImage;
     
     return self;
 }
@@ -49,8 +50,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-   
-    self.colorPicker.delegate = self; 
+    
+    self.colorPicker.delegate = self;
     self.colorPicker.colors = [self.delegate backgroundColors];
     
     
@@ -62,11 +63,11 @@
     }
     
     self.imageView.image = self.inputImage;
-        
+    
     self.scrollView.minimumZoomScale = 1.0;
     self.scrollView.maximumZoomScale = 4;
     self.scrollView.contentSize = self.imageView.frame.size;
-
+    
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -87,13 +88,50 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
- 
+
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
     return self.imageView;
 }
 
 
 -(IBAction)doneButtonAction {
+    [self editingDone];
+}
+
+- (void)scrollViewDidZoom:(UIScrollView *)aScrollView {
+    // fixed centering when smaller than orig.
+    CGFloat offsetX = (self.scrollView.bounds.size.width > self.scrollView.contentSize.width)?
+    (self.scrollView.bounds.size.width - self.scrollView.contentSize.width) * 0.5 : 0.0;
+    CGFloat offsetY = (self.scrollView.bounds.size.height > self.scrollView.contentSize.height)?
+    (self.scrollView.bounds.size.height - self.scrollView.contentSize.height) * 0.5 : 0.0;
+    self.imageView.center = CGPointMake(self.scrollView.contentSize.width * 0.5 + offsetX,
+                                        self.scrollView.contentSize.height * 0.5 + offsetY);
+}
+
+-(IBAction)cancelButtonAction {
+    [self cancel];
+}
+
+-(void)rotateButtonAction {
+    //NSLog(@"Rotate image 90 degrees.");
+    rotation += M_PI/2;
+    self.scrollView.transform = CGAffineTransformRotate(self.scrollView.transform, M_PI/2);
+}
+
+-(IBAction)changeColor:(UIButton *)sender {
+    if (!sender || ![sender respondsToSelector:@selector(backgroundColor)]) return;
+    
+    [self changeBackgroundColorTo:sender.backgroundColor];
+}
+
+- (void)changeBackgroundColorTo:(UIColor *)newColor
+{
+    NSAssert(newColor, @"newColor must not be nil");
+    self.imageView.backgroundColor = newColor;
+}
+
+- (void)editingDone
+{
     // draw the image into a new image.
     
     CGFloat screenScale = [[UIScreen mainScreen] scale];
@@ -144,47 +182,27 @@
     CGContextTranslateCTM(context, 320, 320); // drawingRect has been offset to handle this
     CGContextRotateCTM(context, rotation);
     
-    //CGContextDrawImage(context, 
-       //                drawingRect, imageView.image.CGImage);
+    //CGContextDrawImage(context,
+    //                drawingRect, imageView.image.CGImage);
     
     [self.imageView.image drawInRect:drawingRect];
     
     
     UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-
+    
     // newImage is the result.
-
-    NSAssert([self.delegate conformsToProtocol:@protocol(DMResizerDelegate)], @"Bad delegate %@", self.delegate);
-    [self.delegate resizer:self finishedResizingWithResult:newImage];
-}
-
-- (void)scrollViewDidZoom:(UIScrollView *)aScrollView {
-    // fixed centering when smaller than orig.
-    CGFloat offsetX = (self.scrollView.bounds.size.width > self.scrollView.contentSize.width)?
-    (self.scrollView.bounds.size.width - self.scrollView.contentSize.width) * 0.5 : 0.0;
-    CGFloat offsetY = (self.scrollView.bounds.size.height > self.scrollView.contentSize.height)?
-    (self.scrollView.bounds.size.height - self.scrollView.contentSize.height) * 0.5 : 0.0;
-    self.imageView.center = CGPointMake(self.scrollView.contentSize.width * 0.5 + offsetX,
-                                   self.scrollView.contentSize.height * 0.5 + offsetY);
-}
-
--(IBAction)cancelButtonAction {
-    NSAssert([self.delegate conformsToProtocol:@protocol(DMResizerDelegate)], @"Bad delegate %@", self.delegate);
-    [self.delegate resizer:self finishedResizingWithResult:nil]; // nil image == cancel button.
-}
-
--(void)rotateButtonAction {
-    //NSLog(@"Rotate image 90 degrees.");
-    rotation += M_PI/2;
-    self.scrollView.transform = CGAffineTransformRotate(self.scrollView.transform, M_PI/2);
-}
-
--(IBAction)changeColor:(UIButton *)sender {
-    if (!sender || ![sender respondsToSelector:@selector(backgroundColor)]) return;
     
-    self.imageView.backgroundColor = sender.backgroundColor;
-    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(resizer:finishedResizingWithResult:)]) {
+        [self.delegate resizer:self finishedResizingWithResult:newImage];
+    }
+}
+
+- (void)cancel
+{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(resizer:finishedResizingWithResult:)]) {
+        [self.delegate resizer:self finishedResizingWithResult:nil]; // nil image == cancel button.
+    }
 }
 
 

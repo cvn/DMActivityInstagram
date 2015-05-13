@@ -130,7 +130,7 @@
 -(void)activityDidFinish:(BOOL)success {
     NSError *error = nil;
     NSString *writePath = [NSTemporaryDirectory() stringByAppendingPathComponent:@"instagram.igo"];
-    if (![[NSFileManager defaultManager] removeItemAtPath:writePath error:&error]) {
+    if ([[NSFileManager defaultManager] fileExistsAtPath:writePath] && ![[NSFileManager defaultManager] removeItemAtPath:writePath error:&error]) {
         NSLog(@"Error cleaning up temporary image file: %@", error);
     }
     [super activityDidFinish:success];
