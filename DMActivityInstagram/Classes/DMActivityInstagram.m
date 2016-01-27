@@ -7,7 +7,6 @@
 //
 
 #import "DMActivityInstagram.h"
-#import "DMResizerViewController.h"
 
 @implementation DMActivityInstagram
 
@@ -74,21 +73,6 @@
     [_resizeController setDelegate:self];
     if ([self imageIsSquare:self.shareImage]) {
         [_resizeController setSkipCropping:YES];
-    }
-}
-
--(void)resizer:(DMResizerViewController *)resizer finishedResizingWithResult:(UIImage *)image {
-    if (image == nil) {
-        if (self.documentController) {
-            [self.documentController dismissMenuAnimated:YES];
-        }
-        [self activityDidFinish:NO];
-        return;
-    } else {
-        self.presentFromButton = resizer.doneButton;
-        self.shareImage = image;
-        // performActivity
-        [self performActivity];
     }
 }
 

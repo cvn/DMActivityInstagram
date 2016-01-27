@@ -35,9 +35,6 @@
 		8BD3FCD817F11DBC001155D6 /* knit2@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8BD3FCD717F11DBC001155D6 /* knit2@2x.jpg */; };
 		8BFEBF9A160C774900A4A213 /* instagram@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BFEBF96160C774900A4A213 /* instagram@2x.png */; };
 		EAF59C261B0348B800C78CD5 /* DMActivityInstagram.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF59C201B0348B800C78CD5 /* DMActivityInstagram.m */; };
-		EAF59C271B0348B800C78CD5 /* DMColorPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF59C221B0348B800C78CD5 /* DMColorPickerView.m */; };
-		EAF59C281B0348B800C78CD5 /* DMResizerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF59C241B0348B800C78CD5 /* DMResizerViewController.m */; };
-		EAF59C291B0348B800C78CD5 /* DMResizerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAF59C251B0348B800C78CD5 /* DMResizerViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,11 +72,6 @@
 		8BFEBF96160C774900A4A213 /* instagram@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "instagram@2x.png"; sourceTree = "<group>"; };
 		EAF59C1F1B0348B800C78CD5 /* DMActivityInstagram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMActivityInstagram.h; sourceTree = "<group>"; };
 		EAF59C201B0348B800C78CD5 /* DMActivityInstagram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMActivityInstagram.m; sourceTree = "<group>"; };
-		EAF59C211B0348B800C78CD5 /* DMColorPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMColorPickerView.h; sourceTree = "<group>"; };
-		EAF59C221B0348B800C78CD5 /* DMColorPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMColorPickerView.m; sourceTree = "<group>"; };
-		EAF59C231B0348B800C78CD5 /* DMResizerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMResizerViewController.h; sourceTree = "<group>"; };
-		EAF59C241B0348B800C78CD5 /* DMResizerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMResizerViewController.m; sourceTree = "<group>"; };
-		EAF59C251B0348B800C78CD5 /* DMResizerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DMResizerViewController.xib; sourceTree = "<group>"; };
 		EAF59C2A1B0348D900C78CD5 /* DMResizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMResizer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -190,11 +182,6 @@
 				EAF59C2A1B0348D900C78CD5 /* DMResizer.h */,
 				EAF59C1F1B0348B800C78CD5 /* DMActivityInstagram.h */,
 				EAF59C201B0348B800C78CD5 /* DMActivityInstagram.m */,
-				EAF59C211B0348B800C78CD5 /* DMColorPickerView.h */,
-				EAF59C221B0348B800C78CD5 /* DMColorPickerView.m */,
-				EAF59C231B0348B800C78CD5 /* DMResizerViewController.h */,
-				EAF59C241B0348B800C78CD5 /* DMResizerViewController.m */,
-				EAF59C251B0348B800C78CD5 /* DMResizerViewController.xib */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -253,7 +240,6 @@
 			files = (
 				8BD3FCD317F11299001155D6 /* blue-td@2x.jpg in Resources */,
 				8BD3FCCD17F11299001155D6 /* space@2x.jpg in Resources */,
-				EAF59C291B0348B800C78CD5 /* DMResizerViewController.xib in Resources */,
 				636FE3381C5969A0006BD749 /* instagram@3x.png in Resources */,
 				8B03DB05160C5DD50070B8B0 /* InfoPlist.strings in Resources */,
 				8B03DB0D160C5DD50070B8B0 /* Default.png in Resources */,
@@ -287,8 +273,6 @@
 				8B03DB07160C5DD50070B8B0 /* main.m in Sources */,
 				8B03DB0B160C5DD50070B8B0 /* DMAppDelegate.m in Sources */,
 				8B03DB14160C5DD50070B8B0 /* DMAIDemoViewController.m in Sources */,
-				EAF59C281B0348B800C78CD5 /* DMResizerViewController.m in Sources */,
-				EAF59C271B0348B800C78CD5 /* DMColorPickerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
